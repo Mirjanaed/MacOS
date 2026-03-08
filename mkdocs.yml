@@ -1,0 +1,18 @@
+site_name: Ma Doc MacBook 2013
+theme:
+  name: material
+  language: fr
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate # Mode sombre automatique
+      primary: indigo
+      accent: indigo
+  features:
+    - content.code.copy # Le bouton magique pour copier le code !
+    - navigation.tabs   # Pour avoir les onglets en haut
+
+nav:
+  - Accueil: index.md
+  - Installation Bash: installation.md

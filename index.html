@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Accueil
+              Home
             
           </span>
         </div>
@@ -200,7 +200,7 @@
   
     
   
-  Accueil
+  Home
 
       </a>
     </li>
@@ -219,7 +219,7 @@
   
     
   
-  Installation Bash
+  Installation Rapide (MacBook Air 2013)
 
       </a>
     </li>
@@ -282,7 +282,7 @@
   <span class="md-ellipsis">
     
   
-    Accueil
+    Home
   
 
     
@@ -310,7 +310,7 @@
   <span class="md-ellipsis">
     
   
-    Installation Bash
+    Installation Rapide (MacBook Air 2013)
   
 
     
@@ -379,6 +379,7 @@
   }
 
   .hero-text h1 { color: white !important; font-size: 3rem !important; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+  .hero-text p { color: white !important; font-size: 1.2rem; }
 
   /* Style des Cartes "Catalogue" (Effet Verre) */
   .grid.cards > ul > li {
@@ -388,6 +389,7 @@
     border-radius: 15px !important;
     padding: 20px !important;
     transition: transform 0.3s ease;
+    list-style: none !important;
   }
 
   .grid.cards > ul > li:hover {
@@ -395,15 +397,28 @@
     background: rgba(255, 255, 255, 0.2) !important;
   }
 
-  .grid.cards strong, .grid.cards p { color: white !important; }
-  .grid.cards a { 
-    background: white; 
+  /* Correction des textes et icônes dans les cartes */
+  .grid.cards li strong { color: white !important; display: inline-block; margin-bottom: 10px; }
+  .grid.cards li p { color: white !important; opacity: 0.9; }
+
+  /* Style des boutons */
+  .grid.cards li a { 
+    display: inline-block;
+    margin-top: 15px;
+    background: white !important; 
     color: black !important; 
-    padding: 8px 15px; 
-    border-radius: 5px; 
-    text-decoration: none;
+    padding: 10px 20px !important; 
+    border-radius: 8px !important; 
+    text-decoration: none !important;
     font-weight: bold;
   }
+
+  .grid.cards li a:hover {
+    background: #e0e0e0 !important;
+  }
+
+  /* Taille des icônes */
+  .grid.cards .lg { font-size: 2.5rem; display: block; margin-bottom: 10px; color: white; }
 </style>
 
 <div class="hero-text">
@@ -414,19 +429,19 @@
 <div class="grid cards">
 <ul>
 <li>
-<p>:material-terminal:{ .lg .middle } <strong>Guide d'Installation Bash</strong>
+<p>:material-terminal:{ .lg } <strong>Guide d'Installation Bash</strong>
     ---
     Toutes les commandes pour configurer votre Mac 2013 de A à Z.
     <a href="installation/">:octicons-arrow-right-24: Voir le guide</a></p>
 </li>
 <li>
-<p>:material-map-legend:{ .lg .middle } <strong>Projets Cartographiques</strong>
+<p>:material-map-legend:{ .lg } <strong>Projets Cartographiques</strong>
     ---
     Visualisation de données VRT et analyses spatiales avancées.
     <a href="projets.md">:octicons-arrow-right-24: Explorer</a></p>
 </li>
 <li>
-<p>:material-github:{ .lg .middle } <strong>Dépôts GitHub</strong>
+<p>:material-github:{ .lg } <strong>Dépôts GitHub</strong>
     ---
     Accès direct au code source, scripts et historiques de requêtes.
     <a href="https://github.com/Mirjanaed">:octicons-external-link-16: Ouvrir GitHub</a></p>

@@ -10,9 +10,16 @@ theme:
       primary: indigo
       accent: indigo
   features:
-    - content.code.copy # Le bouton magique pour copier le code !
-    - navigation.tabs   # Pour avoir les onglets en haut
+    - content.code.copy # Bouton pour copier le code
+    - navigation.tabs   # Onglets en haut
+    - navigation.sections
+    - content.tabs.link
 
-nav:
-  - Accueil: index.md
-  - Installation Bash: installation.md
+markdown_extensions:
+  - attr_list     # Pour le design des cartes et icônes
+  - md_in_html    # Pour le fond d'écran et le CSS dans l'index
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.superfences # Pour les blocs de code complexes
+  - pymdownx.magiclink   # Pour transformer les liens automatiquement

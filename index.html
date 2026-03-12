@@ -156,6 +156,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -425,6 +427,15 @@
   .hero-text h1 { color: white !important; font-size: 3rem !important; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
   .hero-text p { color: white !important; font-size: 1.2rem; opacity: 0.9; }
 
+  .grid.cards > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none !important;
+    padding: 0;
+  }
+
   .grid.cards > ul > li {
     background: rgba(255, 255, 255, 0.1) !important;
     backdrop-filter: blur(12px);
@@ -432,13 +443,30 @@
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: 12px !important;
     padding: 24px !important;
-    list-style: none !important;
+    width: 300px;
+    flex-grow: 1;
   }
 
   .grid.cards li strong { color: white !important; font-size: 1.2rem; display: block; margin-bottom: 8px; }
-  .grid.cards li p { color: white !important; margin-bottom: 16px; font-size: 0.95rem; }
+  .grid.cards li p { color: white !important; margin-bottom: 16px; font-size: 0.95rem; line-height: 1.5; }
+  .grid.cards hr { border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 10px 0; }
 
-  /* On laisse MkDocs Material gérer le style du bouton .md-button tout seul pour éviter les bugs */
+  /* Style du bouton forcé en blanc */
+  .custom-btn {
+    display: inline-block;
+    background-color: white !important;
+    color: black !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .custom-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
 </style>
 
 <div class="hero-text">
@@ -447,26 +475,26 @@
 </div>
 
 <div class="grid cards">
-<ul>
-<li>
-<p><strong>Guide d'Installation Bash</strong>
-    ---
-    Toutes les commandes pour configurer votre Mac 2013 de A à Z.</p>
-<p><a class="md-button" href="installation/">Voir le guide :octicons-arrow-right-24:</a></p>
-</li>
-<li>
-<p><strong>Projets Cartographiques</strong>
-    ---
-    Visualisation de données VRT et analyses spatiales avancées.</p>
-<p><a class="md-button" href="projets/">Explorer :octicons-arrow-right-24:</a></p>
-</li>
-<li>
-<p><strong>Dépôts GitHub</strong>
-    ---
-    Accès direct au code source, scripts et historiques de requêtes.</p>
-<p><a class="md-button" href="https://github.com/Mirjanaed">Ouvrir GitHub :octicons-external-link-16:</a></p>
-</li>
-</ul>
+  <ul>
+    <li>
+      <strong>Guide d'Installation Bash</strong>
+      <hr>
+      <p>Toutes les commandes pour configurer votre Mac 2013 de A à Z.</p>
+      <a href="installation.md" class="custom-btn">Voir le guide →</a>
+    </li>
+    <li>
+      <strong>Projets Cartographiques</strong>
+      <hr>
+      <p>Visualisation de données VRT et analyses spatiales avancées.</p>
+      <a href="projets.md" class="custom-btn">Explorer →</a>
+    </li>
+    <li>
+      <strong>Dépôts GitHub</strong>
+      <hr>
+      <p>Accès direct au code source, scripts et historiques de requêtes.</p>
+      <a href="https://github.com/Mirjanaed" class="custom-btn" target="_blank">Ouvrir GitHub ↗</a>
+    </li>
+  </ul>
 </div>
 
 
@@ -490,10 +518,14 @@
             </div>
           
           
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
         
       </main>
       
@@ -524,7 +556,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "content.code.copy", "navigation.sections", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "content.code.copy", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.79ae519e.min.js"></script>

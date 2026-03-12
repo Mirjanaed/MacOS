@@ -10,19 +10,22 @@ theme:
       primary: black
       accent: indigo
   features:
-    - navigation.tabs
-    - content.code.copy
-    - navigation.sections
-    - content.tabs.link
+    - navigation.tabs          # Onglets horizontaux
+    - navigation.sections      # Sections claires dans le menu
+    - navigation.top           # Bouton "Retour en haut"
+    - navigation.tracking      # Met à jour l'URL selon la lecture
+    - content.code.copy        # Bouton copier pour tes scripts Bash
+    - search.suggest           # Suggestions dans la barre de recherche
+    - search.highlight         # Surlignage des mots trouvés
 
 markdown_extensions:
-  - attr_list
-  - md_in_html
-  - pymdownx.emoji:
+  - attr_list                  # Indispensable pour le design des cartes
+  - md_in_html                 # Indispensable pour ton code HTML/CSS de l'index
+  - pymdownx.superfences       # Pour l'affichage propre du code
+  - pymdownx.magiclink         # Liens cliquables automatiquement
+  - pymdownx.emoji:            # Configuration stable pour les icônes
       emoji_index: !!python/name:pymdownx.emoji.twemoji
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.superfences
-  - pymdownx.magiclink
 
 nav:
   - Accueil: index.md

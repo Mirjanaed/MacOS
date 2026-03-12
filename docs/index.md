@@ -35,19 +35,8 @@ hide:
 
   .grid.cards li strong { color: white !important; font-size: 1.2rem; display: block; margin-bottom: 8px; }
   .grid.cards li p { color: white !important; margin-bottom: 16px; font-size: 0.95rem; }
-  
-  .grid.cards li a { 
-    display: inline-block;
-    background: white !important; 
-    color: black !important; 
-    padding: 10px 20px !important; 
-    border-radius: 6px !important; 
-    text-decoration: none !important;
-    font-weight: bold;
-    transition: 0.2s;
-  }
-  
-  .grid.cards li a:hover { transform: scale(1.05); background: #f0f0f0 !important; }
+
+  /* On laisse MkDocs Material gérer le style du bouton .md-button tout seul pour éviter les bugs */
 </style>
 
 <div class="hero-text">
@@ -58,27 +47,21 @@ hide:
 <div class="grid cards" markdown>
 
 -   **Guide d'Installation Bash**
-    
     ---
-    
     Toutes les commandes pour configurer votre Mac 2013 de A à Z.
     
-    [:octicons-arrow-right-24: Voir le guide](installation.md)
+    [Voir le guide :octicons-arrow-right-24:](installation.md){ .md-button }
 
 -   **Projets Cartographiques**
-    
     ---
-    
     Visualisation de données VRT et analyses spatiales avancées.
     
-    [:octicons-arrow-right-24: Explorer](projets.md)
+    [Explorer :octicons-arrow-right-24:](projets.md){ .md-button }
 
 -   **Dépôts GitHub**
-    
     ---
-    
     Accès direct au code source, scripts et historiques de requêtes.
     
-    [:octicons-external-link-16: Ouvrir GitHub](https://github.com/Mirjanaed)
+    [Ouvrir GitHub :octicons-external-link-16:](https://github.com/Mirjanaed){ .md-button }
 
 </div>
